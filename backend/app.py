@@ -24,18 +24,36 @@ def cats():
 @app.route("/cat/create", methods=["POST"])
 def add_cat():
     # print("first data: ", request.data)
-    # binary string döner
-    data = request.get_json()
-    cat = Cat(
-        title=data["title"],
-        description=data["description"],
-        img_url=data["imgUrl"],
-        city=data["city"],
-        email=data["email"],
-    )
-    db.session.add(cat)
-    db.session.commit()
-    return jsonify(cat.to_json()), 201
+    # binary string döner    
+    try:
+        data = request.get_json()
+        cat = Cat(
+            title=data["title"],
+            description=data.get("description"),  # Opsiyonel
+            img_url=data["imgUrl"],
+            city=data["city"],
+            email=data["email"],
+            age=data["age"],
+            gender=data["gender"],
+            breed=data.get("breed"),  
+            color=data.get("color"),  
+            phone=data.get("phone"),
+            vaccinated=data["vaccinated"],
+            neutered=data["neutered"],
+            health_status=data.get("healthStatus"), 
+            adoption_terms=data.get("adoptionTerms"),  
+            personality=data.get("personality"), 
+        )
+
+        # Veritabanına ekle
+        session.add(cat)
+        session.commit()
+        return jsonify(cat.to_json()), 201
+
+    except Exception as e:
+        # hata döndür
+        session.rollback()
+        return jsonify({"error": str(e)}), 400
 
 @app.route("/cat/<int:cat_id>", methods=["GET"]) # @app.get
 def cat(cat_id):

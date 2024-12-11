@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router";
+import Modal from "./Modal";
 interface Cats {
   id: number;
   title: string;
   description: string;
   imgUrl: string;
 }
-interface CardProps {
+export interface CardProps {
   cat: Cats;
 }
 class Card extends React.Component<CardProps> {
@@ -24,9 +25,7 @@ class Card extends React.Component<CardProps> {
           <h2 className="card-title">{this.props.cat.title}</h2>
           <p>{this.props.cat.description}</p>
           <div className="card-actions">
-            <Link to={`/cat/${this.props.cat.id}`}>
-              <button className="btn btn-primary mt-4">Detaylar</button>
-            </Link>
+            <Modal cat={this.props.cat} />
           </div>
         </div>
       </div>

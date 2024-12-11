@@ -32,7 +32,8 @@ class CatDetail extends React.Component<CatDetailProps, CatDetailState> {
         if(this.state.loading){
             return <Skeleton count={1} />
         }
-        return <div>DetailCat: {this.state.cat.title} </div>;
+        return <div>
+        DetailCat: {this.state.cat.title} </div>;
     }
 }
 

@@ -19,8 +19,8 @@ class InputField extends React.Component<InputFieldProps, InputFieldState>{
     render(){
         console.log(this.state.change)
         return(
-            <div className="indicator">
-            <span className="indicator-item badge">{this.props.badge}</span>
+            <div className="flex flex-row gap-4 items-center">
+            <span>{this.props.badge}</span>
             <input
               type={this.props.type}
               placeholder={this.props.placeholder}
