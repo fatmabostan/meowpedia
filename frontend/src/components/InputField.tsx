@@ -1,6 +1,6 @@
 import React from "react";
 interface InputFieldProps{
-    badge: string, 
+    label: string, 
     type: string,
     placeholder: string
 }
@@ -19,12 +19,12 @@ class InputField extends React.Component<InputFieldProps, InputFieldState>{
     render(){
         console.log(this.state.change)
         return(
-            <div className="flex flex-row gap-4 items-center">
-            <span>{this.props.badge}</span>
+            <div className="flex flex-row gap-4 items-center justify-between">
+            <span>{this.props.label}</span>
             <input
               type={this.props.type}
               placeholder={this.props.placeholder}
-              className="input input-bordered"
+              className="input border-green-600 w-96"
               value={this.state.change}
               onChange={(e) => this.setState({change: e.target.value}) }
             />

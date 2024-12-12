@@ -1,104 +1,43 @@
-/* Genel sıfırlama: Tüm öğelerin varsayılan boşluklarını sıfırlama */
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-/* Tarayıcı varsayılan düzenlemelerini sıfırla */
-html,
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    font-family: Arial, Helvetica, sans-serif; /* Varsayılan yazı tipi */
-    color: #333; 
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Sağ yatay kaydırma çubuğunu engelle */
+	line-height: 1;
 }
-
-
-/* Listeler için sıfırlama */
-ul,
-ol {
-  list-style: none; /* Liste işaretlerini temizle */
+ol, ul {
+	list-style: none;
 }
-
-/* Bağlantıları sıfırlama */
-a {
-  text-decoration: none; /* Alt çizgileri temizle */
-  color: inherit; /* Bağlantı renklerini kalıtımdan al */
+blockquote, q {
+	quotes: none;
 }
-
-/* Tablo düzenlemelerini sıfırla */
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
 table {
-  border-collapse: collapse; /* Tablo kenarlarının boşluğunu kaldır */
-  border-spacing: 0;
-}
-
-/* Görsellerle ilgili sıfırlama */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto; /* Görsellerin oranlı olarak boyutlanmasını sağla */
-}
-
-/* Butonları sıfırlama */
-button,
-input,
-select {
-  background: none;
-  border: none;
-  outline: none;
-  appearance: none; /* Tarayıcıların varsayılan görünümünü sıfırla */
-}
-
-/* Form alanları için sıfırlama */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-  border: none;
-  outline: none;
-}
-
-/* Görsel düzenlemeler için */
-hr {
-  border: none;
-  border-top: 1px solid #ccc; /* Görsel olarak bir ayırıcı kullan */
-}
-
-/* Medya sorguları ve tarayıcı tutarlılığı için sıfırlamalar */
-button {
-  cursor: pointer; /* Tıklanabilir alanlara işaretçi ekle */
-}
-
-/* Tarayıcı varsayılan boşlukları sıfırlama */
-html {
-  line-height: 1.5; /* Satır yüksekliklerini tutarlı hale getir */
-}
-
-/* Arama kutuları ve inputlar */
-input[type="search"] {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Görsel tutarlılık için */
-fieldset {
-  border: none;
-}
-
-/* Opera, Safari ve tarayıcı varsayılan stillerini sıfırla */
-iframe {
-  border: none;
-}
-
-/* Görsel yapıdaki yuvarlak stilleri sıfırla */
-svg,
-canvas {
-  display: block;
-  vertical-align: top;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
