@@ -50,38 +50,9 @@ class HeroSection extends React.Component<{}, HeroSectionState> {
     const randomImg: number = Math.floor(Math.random() * 14) + 1;
 
     return (
-      <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: `url(./src/assets/images/img-${randomImg}.jpg)`,
-        }}
-      >
-        <div className="hero-overlay bg-opacity-65">??????????</div>
-        <div className="hero-content text-neutral-content text-center">
-          <div className="max-w-xl">
-            <h1 className="mb-5 text-5xl font-bold">
-              Merhaba, Minik Bir Dost Edinmeye Hazır Mısınız?
-            </h1>
-            <p className="mb-5">
-              Her kedi, bir yuva ve sevgiyle dolu bir kalp arıyor. Minik
-              patiler, yeni bir başlangıç yapmak için sabırsızlanıyor. Her biri
-              size neşe, mutluluk ve sonsuz sevgi sunmaya hazır. Onların
-              hayatlarına dokunarak, birlikte mutlu bir yaşamın ilk adımını
-              atabilirsiniz. Bu minik dostlar, sadece bir ev arkadaşı değil,
-              aynı zamanda kalbinizi ısıtacak birer aile üyesi olacak. Onların
-              hikayesine ortak olun ve onlara sıcak bir yuva sunarak hayatlarını
-              değiştirmelerine yardımcı olun. Çünkü her kedi, sevgi dolu bir
-              yuvayı hak ediyor!
-            </p>
-            <button
-              className="btn btn-primary"
-              onClick={this.handleButtonClick}
-            >
-              Şimdi Sahiplen
-            </button>
-          </div>
-        </div>
-      </div>
+      <div>
+      
+  </div>
     );
   }
 }
